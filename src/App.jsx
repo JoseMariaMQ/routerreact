@@ -1,27 +1,26 @@
 import React from "react";
-import Inicio from "./components/Inicio";
-import Base from "./components/Base";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+import  {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Switch
 } from "react-router-dom";
+import Usuarios from "./components/Usuarios";
+import Usuario from "./components/Usuario";
 
 function App() {
   return (
     <Router>
-      <Link to="/inicio">Inicio</Link>
-      <Link to="/">Base</Link>
+        <Link to="/">Usuarios</Link>
 
-      <Switch>
-        <Route exact path="/">
-          <Base/>
-        </Route>
-        <Route path="/inicio/:id/:nombre/:edad">
-          <Inicio/>
-        </Route>
-      </Switch>
+        <Switch>
+            <Route exact path="/">
+                <Usuarios/>
+            </Route>
+            <Route path="/usuario/:id">
+                <Usuario/>
+            </Route>
+        </Switch>
     </Router>
   );
 }

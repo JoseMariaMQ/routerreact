@@ -18,7 +18,7 @@ function App() {
         <Route exact path="/">
           <Base/>
         </Route>
-        <Route path="/inicio">
+        <Route path="/inicio/:id/:nombre/:edad">
           <Inicio/>
         </Route>
       </Switch>
